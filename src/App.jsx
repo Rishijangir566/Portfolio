@@ -21,10 +21,13 @@ import {
 import { RiJavascriptFill, RiTailwindCssFill } from "react-icons/ri";
 <BiLogoMongodb />;
 import { FaEnvelope, FaPhoneAlt, } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { useState } from "react";
 
 
 function App() {
   const Name = "RISHABH";
+  const [isOpen, setIsOpen] = useState(false);
   const experiences = [
     {
       company: "FSL Learning.",
@@ -93,6 +96,18 @@ function App() {
             </a>
           </li>
         </ul>
+        <div className="md:hidden text-white text-3xl cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
+  {isOpen ? <FaTimes /> : <FaBars />}
+</div>
+        <ul className={`md:hidden absolute top-20 left-0 w-full bg-black text-white flex flex-col items-center space-y-6 py-8 transition-all duration-300 ease-in-out z-40 ${isOpen ? 'block' : 'hidden'}`}>
+  <li><a href="#home" onClick={() => setIsOpen(false)} className="hover:text-[#00ff88]">Home</a></li>
+  <li><a href="#about" onClick={() => setIsOpen(false)} className="hover:text-[#00ff88]">About</a></li>
+  <li><a href="#skills" onClick={() => setIsOpen(false)} className="hover:text-[#00ff88]">Skills</a></li>
+  <li><a href="#projects" onClick={() => setIsOpen(false)} className="hover:text-[#00ff88]">Projects</a></li>
+  <li><a href="#contact" onClick={() => setIsOpen(false)} className="hover:text-[#00ff88]">Contact</a></li>
+</ul>
+
+
         
       </nav>
 
@@ -106,9 +121,9 @@ function App() {
             Rishabh Jangir
           </h1>
           <img className="h-30 w-30 my-8 rounded-full mx-auto" src={rishi} alt="" />
-          <h2 className="text-2xl text-[#b3b3b3] mb-2">I'm a Frontend Developer</h2>
-          <p className=" mb-8 ">
-          I’m focused on building responsive front-end web applications integrating back-end technologies.          </p>
+          <h2 className="text-3xl  mb-2">I'm a Frontend Developer</h2>
+          <p className=" mb-8 text-[#b3b3b3]  ">
+         focused on building responsive front-end web applications integrating back-end technologies.          </p>
           <div className="flex justify-center gap-4 flex-wrap ">
             <a
               href="#contact"
@@ -237,13 +252,13 @@ function App() {
               <p className="mb-4">A full-stack productivity app built using MongoDB, Express, React, and Node.js. Users can add, edit, and delete tasks with a responsive UI and real-time updates. </p>
               <div className="flex gap-4  mt-8">
                 <a
-                  href="https://todolist-fullstack-1-i2zm.onrender.com"
+                  href="https://todolist-fullstack-1-i2zm.onrender.com"  target="_blank"
                   className="btn small py-2 px-4 bg-[#00ff88] text-black rounded"
                 >
                   View
                 </a>
                 <a
-                  href="https://github.com/Rishijangir566/TodoList_Fullstack"
+                  href="https://github.com/Rishijangir566/TodoList_Fullstack"  target="_blank"
                   className="btn small py-2 px-4 border border-[#00ff88] text-[#00ff88] rounded"
                 >
                   GitHub
@@ -262,13 +277,13 @@ function App() {
 Features: </p>
               <div className="flex gap-4  mt-8">
                 <a
-                  href="https://basic-detail-form.onrender.com"
+                  href="https://basic-detail-form.onrender.com"  target="_blank"
                   className="btn small py-2 px-4 bg-[#00ff88] text-black rounded"
                 >
                   View
                 </a>
                 <a
-                  href="https://github.com/Rishijangir566/basic_detail_form"
+                  href="https://github.com/Rishijangir566/basic_detail_form"  target="_blank"
                   className="btn small py-2 px-4 border border-[#00ff88] text-[#00ff88] rounded"
                 >
                   GitHub
@@ -285,13 +300,13 @@ Features: </p>
               <p className="mb-4">Spot The Avengers" is a fun and interactive game where players test their observation skills by identifying hidden Avengers characters in an image.  </p>
               <div className="flex gap-4  mt-8">
                 <a
-                  href="https://spot-the-avengers-ht6a.vercel.app"
+                  href="https://spot-the-avengers-ht6a.vercel.app"  target="_blank"
                   className="btn small py-2 px-4 bg-[#00ff88] text-black rounded"
                 >
                   View
                 </a>
                 <a
-                  href="https://github.com/Rishijangir566/Spot-The-Avengers"
+                  href="https://github.com/Rishijangir566/Spot-The-Avengers"  target="_blank"
                   className="btn small py-2 px-4 border border-[#00ff88] text-[#00ff88] rounded"
                 >
                   GitHub
@@ -309,13 +324,13 @@ Features: </p>
               <p className="mb-4">A sleek and responsive memory card game designed to challenge your focus and sharpen your memory.</p>
               <div className="flex gap-4 mt-8">
                 <a
-                  href="https://rishijangir566.github.io/flip-card/"
+                  href="https://rishijangir566.github.io/flip-card/"  target="_blank"
                   className="btn small py-2 px-4 bg-[#00ff88] text-black rounded"
                 >
                   View
                 </a>
                 <a
-                  href="https://github.com/Rishijangir566/flip-card"
+                  href="https://github.com/Rishijangir566/flip-card"   target="_blank"
                   className="btn small py-2 px-4 border border-[#00ff88] text-[#00ff88] rounded"
                 >
                   GitHub
@@ -335,29 +350,31 @@ Features: </p>
         
         <div className=" gap-6 py-4  text-2xl ">
         
-          <div className="text-sm flex justify-center my-8 ">
+          <div className="text-lg flex justify-center my-8 ">
           <FaEnvelope className="text-[#00ff88]  mt-1" />
-          <a href="mailto:rishijangirjr@gmail.com" className="hover:text-[#00ff88] pl-2">rishijangirjr@gmail.com</a>
+          <a href="mailto:rishijangirjr@gmail.com"   target="_blank" className="hover:text-[#00ff88] pl-2">rishijangirjr@gmail.com</a>
           </div>
-          <div className="text-sm flex  justify-center my-8">
+          <div className=" flex text-lg  justify-center my-8">
           <FaPhoneAlt className="text-[#00ff88] mt-1 " />
-          <a href="tel:+919772336350" className="hover:text-[#00ff88]  pl-2">+919772336350</a>
+          <a href="tel:+919772336350"   target="_blank" className="hover:text-[#00ff88]  pl-2">+919772336350</a>
           </div>
          <div className="flex justify-center gap-4 mb-8">
 
           <a
             href="https://github.com/Rishijangir566"
+              target="_blank"
             className="hover:text-[#00ff88]"
             >
             <FaSquareGithub className="text-3xl" />
           </a>
           <a
             href="https://www.linkedin.com/in/rishab-jangir-306a7926b/"
+              target="_blank"
             className="hover:text-[#00ff88]"
             >
             <FaLinkedin className="text-3xl" />
           </a>
-          <a href="https://wa.me/919772336350" className="hover:text-[#00ff88]">
+          <a href="https://wa.me/919772336350"   target="_blank" className="hover:text-[#00ff88]">
             <FaSquareWhatsapp className="text-3xl" />
           </a>
             </div>
