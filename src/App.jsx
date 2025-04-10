@@ -363,13 +363,15 @@ Features: </p>
           </form>
         </div>
         <div className="flex justify-end gap-6 py-4 mx-20 text-2xl">
-          <div className="text-sm flex mt-2">
+          <div >
+          <div className="text-sm flex ">
           <FaEnvelope className="text-cyan-400  mt-1" />
           <a href="mailto:rishijangirjr@gmail.com" className="hover:text-cyan-400 pl-2">rishijangirjr@gmail.com</a>
           </div>
-          <div className="text-sm flex mt-2">
+          <div className="text-sm flex ">
           <FaPhoneAlt className="text-cyan-400 mt-1 " />
           <a href="tel:+919772336350" className="hover:text-cyan-400  pl-2">+919772336350</a>
+          </div>
           </div>
           <a
             href="https://github.com/Rishijangir566"
