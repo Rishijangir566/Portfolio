@@ -16,7 +16,7 @@ import {
   FaNodeJs,
   FaReact,
   FaLinkedin,
-  FaTwitter,
+  FaSquareWhatsapp,
 } from "react-icons/fa6";
 import { RiJavascriptFill, RiTailwindCssFill } from "react-icons/ri";
 <BiLogoMongodb />;
@@ -243,7 +243,7 @@ function App() {
                   View
                 </a>
                 <a
-                  href="https://github.com/Rishijangir566"
+                  href="https://github.com/Rishijangir566/TodoList_Fullstack"
                   className="btn small py-2 px-4 border border-[#00ff88] text-[#00ff88] rounded"
                 >
                   GitHub
@@ -268,7 +268,7 @@ Features: </p>
                   View
                 </a>
                 <a
-                  href="https://github.com/Rishijangir566"
+                  href="https://github.com/Rishijangir566/basic_detail_form"
                   className="btn small py-2 px-4 border border-[#00ff88] text-[#00ff88] rounded"
                 >
                   GitHub
@@ -291,7 +291,7 @@ Features: </p>
                   View
                 </a>
                 <a
-                  href="https://github.com/Rishijangir566"
+                  href="https://github.com/Rishijangir566/Spot-The-Avengers"
                   className="btn small py-2 px-4 border border-[#00ff88] text-[#00ff88] rounded"
                 >
                   GitHub
@@ -315,7 +315,7 @@ Features: </p>
                   View
                 </a>
                 <a
-                  href="https://github.com/Rishijangir566"
+                  href="https://github.com/Rishijangir566/flip-card"
                   className="btn small py-2 px-4 border border-[#00ff88] text-[#00ff88] rounded"
                 >
                   GitHub
@@ -352,13 +352,13 @@ Features: </p>
             <FaSquareGithub className="text-3xl" />
           </a>
           <a
-            href="https://www.linkedin.com/in/rishab-jangir"
+            href="https://www.linkedin.com/in/rishab-jangir-306a7926b/"
             className="hover:text-[#00ff88]"
             >
             <FaLinkedin className="text-3xl" />
           </a>
-          <a href="#" className="hover:text-[#00ff88]">
-            <FaTwitter className="text-3xl" />
+          <a href="https://wa.me/919772336350" className="hover:text-[#00ff88]">
+            <FaSquareWhatsapp className="text-3xl" />
           </a>
             </div>
         </div>
