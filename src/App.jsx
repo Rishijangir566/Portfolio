@@ -93,11 +93,7 @@ function App() {
             </a>
           </li>
         </ul>
-        <div className="md:hidden flex flex-col gap-1 cursor-pointer">
-          <span className="w-6 h-[3px] bg-white"></span>
-          <span className="w-6 h-[3px] bg-white"></span>
-          <span className="w-6 h-[3px] bg-white"></span>
-        </div>
+        
       </nav>
 
       {/* Hero Section */}
@@ -332,68 +328,45 @@ Features: </p>
 
       {/* Contact Section */}
       <section id="contact"  className="pt-20 px-4 bg-[#0a0a0a]">
-        <h2 className="text-center text-3xl text-[#00ff88] font-bold mb-12">
+        <h2 className="text-center text-3xl text-[#00ff88] font-bold mb-4">
           Get in Touch
         </h2>
-        <div className="max-w-xl mx-auto">
-          <form className="space-y-6">
-            <input
-              type="text"
-              placeholder="Your Name"
-              className="w-full p-4 bg-[#1e1e1e] text-white rounded"
-              required
-            />
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="w-full p-4 bg-[#1e1e1e] text-white rounded"
-              required
-            />
-            <textarea
-              placeholder="Your Message"
-              className="w-full p-4 bg-[#1e1e1e] text-white rounded h-36 resize-none"
-              required
-            ></textarea>
-            <button
-              type="submit"
-              className="bg-[#00ff88] text-black font-bold py-2 px-6 rounded hover:-translate-y-1 transition-all"
-            >
-              Send Message
-            </button>
-          </form>
-        </div>
-        <div className="flex justify-end gap-6 py-4 mx-20 text-2xl">
-          <div >
-          <div className="text-sm flex ">
-          <FaEnvelope className="text-cyan-400  mt-1" />
-          <a href="mailto:rishijangirjr@gmail.com" className="hover:text-cyan-400 pl-2">rishijangirjr@gmail.com</a>
+          <h2 className="text-center">Feel free to reach out for collaborations or just a friendly hello 👋</h2>
+        
+        <div className=" gap-6 py-4  text-2xl ">
+        
+          <div className="text-sm flex justify-center my-8 ">
+          <FaEnvelope className="text-[#00ff88]  mt-1" />
+          <a href="mailto:rishijangirjr@gmail.com" className="hover:text-[#00ff88] pl-2">rishijangirjr@gmail.com</a>
           </div>
-          <div className="text-sm flex ">
-          <FaPhoneAlt className="text-cyan-400 mt-1 " />
-          <a href="tel:+919772336350" className="hover:text-cyan-400  pl-2">+919772336350</a>
+          <div className="text-sm flex  justify-center my-8">
+          <FaPhoneAlt className="text-[#00ff88] mt-1 " />
+          <a href="tel:+919772336350" className="hover:text-[#00ff88]  pl-2">+919772336350</a>
           </div>
-          </div>
+         <div className="flex justify-center gap-4 mb-8">
+
           <a
             href="https://github.com/Rishijangir566"
             className="hover:text-[#00ff88]"
-          >
+            >
             <FaSquareGithub className="text-3xl" />
           </a>
           <a
             href="https://www.linkedin.com/in/rishab-jangir"
             className="hover:text-[#00ff88]"
-          >
+            >
             <FaLinkedin className="text-3xl" />
           </a>
           <a href="#" className="hover:text-[#00ff88]">
             <FaTwitter className="text-3xl" />
           </a>
+            </div>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="text-center py-6 text-[#b3b3b3]">
-        &copy; 2024 Risabh Jangir. All rights reserved.
+        &copy; 2025 Risabh Jangir. All rights reserved.
       </footer>
     </div>
   );
