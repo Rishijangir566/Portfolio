@@ -1,4 +1,5 @@
 import logo from "./assets/logo3.avif";
+import rishi from "./assets/rishi2.png";
 import { motion } from "framer-motion";
 import { FcReadingEbook } from "react-icons/fc";
 import { TfiWrite } from "react-icons/tfi";
@@ -19,9 +20,25 @@ import {
 } from "react-icons/fa6";
 import { RiJavascriptFill, RiTailwindCssFill } from "react-icons/ri";
 <BiLogoMongodb />;
+import { FaEnvelope, FaPhoneAlt, } from "react-icons/fa";
+
 
 function App() {
-  const Name = "JANGIR";
+  const Name = "RISHABH";
+  const experiences = [
+    {
+      company: "FSL Learning.",
+      role: "Full Stack Developer Intern",
+      duration: "Aug 2024 - Present",
+      description:
+        "Worked on developing responsive web applications using React.js, Tailwind CSS, and integrated APIs to enhance user experience."
+    },
+  ];
+  
+  const fadeIn = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  };
   return (
     <div className="font-sans text-white bg-[#121212]">
       {/* Navbar */}
@@ -90,13 +107,12 @@ function App() {
       >
         <div className="mt-16">
           <h1 className="text-5xl md:text-6xl text-[#00ff88] font-bold mb-4">
-            Risabh Jangir
+            Rishabh Jangir
           </h1>
-          <h2 className="text-2xl text-[#b3b3b3] mb-6">Fullstack Developer</h2>
-          <p className="text-lg mb-8">
-            Dynamic MERN Stack Developer with a passion for crafting <br />
-            responsive web applications and seamless user experiences.
-          </p>
+          <img className="h-30 w-30 my-8 rounded-full mx-auto" src={rishi} alt="" />
+          <h2 className="text-2xl text-[#b3b3b3] mb-2">I'm a Frontend Developer</h2>
+          <p className=" mb-8 ">
+          I’m focused on building responsive front-end web applications integrating back-end technologies.          </p>
           <div className="flex justify-center gap-4 flex-wrap ">
             <a
               href="#contact"
@@ -138,83 +154,81 @@ function App() {
             <ul className="space-y-2">
               <li className="flex ">
                 <FaPersonRunning className="mt-1 text-green-400 mx-2 " />{" "}
-                Playing sports
+                Playing cricket with friends and enjoying the outdoors
               </li>
               <li className="flex ">
-                <FcReadingEbook className="mt-1 text-green-400 mx-2 " /> Reading
+                <FcReadingEbook className="mt-1 text-green-400 mx-2 " /> Reading about general knowledge
+              </li>
+              <li className="flex ">
+                <FcIdea className="mt-1 text-green-400 mx-2 " /> I absolutely love Exploring new!
+                tech
               </li>
               <li className="flex ">
                 <TfiWrite className="mt-1 text-green-400 mx-2 " /> Writing
-              </li>
-              <li className="flex ">
-                <FcIdea className="mt-1 text-green-400 mx-2 " /> Exploring new
-                tech
               </li>
             </ul>
           </div>
         </div>
       </section>
 
-      {/* Skills Section */}
-      <section id="skills" className="py-20 px-4">
-        <h2 className="text-center text-3xl text-[#00ff88] font-bold mb-12">
-          My Skills
-        </h2>
-        <div className="grid gap-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-6xl mx-auto">
-          <div className="bg-[#1e1e1e] rounded-lg flex flex-col justify-center items-center h-30 w-60 transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-[0_0_20px_#00ff88] group">
-            <FaHtml5 className="text-green-400 text-6xl " />
-            <h3 className="text-xl font-semibold capitalize ">
-              Html
-            </h3>
-          </div>
-          <div className="bg-[#1e1e1e] rounded-lg flex flex-col justify-center items-center h-30 w-60 transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-[0_0_20px_#00ff88] group">
-            <FaCss3Alt className="text-green-400 text-6xl" />
-            <h3 className="text-2xl font-semibold capitalize text-center">
-              css
-            </h3>
-          </div>
-          <div className="bg-[#1e1e1e] rounded-lg flex flex-col justify-center items-center h-30 w-60 transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-[0_0_20px_#00ff88] group">
-            <FaBootstrap className="text-green-400 text-6xl" />
-            <h3 className="text-xl font-semibold capitalize text-center">
-              Bootstrap
-            </h3>
-          </div>
-          <div className="bg-[#1e1e1e] rounded-lg flex flex-col justify-center items-center h-30 w-60 transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-[0_0_20px_#00ff88] group">
-            <RiTailwindCssFill className="text-green-400 text-6xl" />
-            <h3 className="text-xl font-semibold capitalize text-center">
-              Tailwind
-            </h3>
-          </div>
-          <div className="bg-[#1e1e1e] rounded-lg flex flex-col justify-center items-center h-30 w-60 transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-[0_0_20px_#00ff88] group">
-            <RiJavascriptFill className="text-green-400 text-6xl" />
-            <h3 className="text-xl font-semibold capitalize"> javascript</h3>
-          </div>
-
-          <div className="bg-[#1e1e1e] rounded-lg flex flex-col justify-center items-center h-30 w-60 transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-[0_0_20px_#00ff88] group">
-            <FaSquareGithub className="text-green-400 text-6xl" />
-            <h3 className="text-xl font-semibold capitalize"> github</h3>
-          </div>
-          <div className="bg-[#1e1e1e] rounded-lg flex flex-col justify-center items-center h-30 w-60 transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-[0_0_20px_#00ff88] group">
-            <FaReact className="text-green-400 text-6xl" />
-            <h3 className="text-xl font-semibold capitalize"> react</h3>
-          </div>
-          <div className="bg-[#1e1e1e] rounded-lg flex flex-col justify-center items-center h-30 w-60 transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-[0_0_20px_#00ff88] group">
-            <FaNodeJs className="text-green-400 text-6xl" />
-            <h3 className="text-xl font-semibold capitalize"> node.js</h3>
-          </div>
-          <div className="bg-[#1e1e1e] rounded-lg flex flex-col justify-center items-center h-30 w-60 transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-[0_0_20px_#00ff88] group">
-            <DiMongodb className="text-green-400 text-6xl" />
-            <h3 className="text-xl font-semibold capitalize"> mongodb</h3>
-          </div>
-          <div className="bg-[#1e1e1e] rounded-lg flex flex-col justify-center items-center h-30 w-60 transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-[0_0_20px_#00ff88] group">
-            <SiExpress className="text-green-400 text-6xl" />
-            <h3 className="text-xl font-semibold capitalize"> express</h3>
-          </div>
+      {/* Exprince Section */}
+      <section id="experience" className="w-full  text-slate-200 py-20 px-6">
+      <motion.div
+        className="max-w-4xl mx-auto text-center"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeIn}
+      >
+        <h2 className="text-4xl font-bold text-center text-[#00ff88] inline-block mb-10">Experience</h2>
+        <div className="space-y-10">
+          {experiences.map((exp, index) => (
+            <motion.div
+              key={index}
+              variants={fadeIn}
+              className="bg-[#1f2937] p-6 rounded-xl shadow-md hover:shadow-cyan-400/20 transition"
+            >
+              <h3 className="text-xl font-semibold text-cyan-400">{exp.role} @ {exp.company}</h3>
+              <p className="text-sm text-slate-400 mb-2">{exp.duration}</p>
+              <p className="text-slate-300">{exp.description}</p>
+            </motion.div>
+          ))}
         </div>
-      </section>
+      </motion.div>
+    </section>
+
+
+      {/* Skills Section */}
+      <section id="skills" className="py-20 px-4 bg-[#0a0a0a]">
+  <h2 className="text-center text-3xl text-[#00ff88] font-bold mb-12">
+    My Skills
+  </h2>
+  <div className="grid gap-6 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-6xl mx-auto">
+    {[
+      { icon: <FaHtml5 />, name: "Html" },
+      { icon: <FaCss3Alt />, name: "Css" },
+      { icon: <FaBootstrap />, name: "Bootstrap" },
+      { icon: <RiTailwindCssFill />, name: "Tailwind" },
+      { icon: <RiJavascriptFill />, name: "JavaScript" },
+      { icon: <FaSquareGithub />, name: "GitHub" },
+      { icon: <FaReact />, name: "React" },
+      { icon: <FaNodeJs />, name: "Node.js" },
+      { icon: <DiMongodb />, name: "MongoDB" },
+      { icon: <SiExpress />, name: "Express" },
+    ].map((skill, idx) => (
+      <div
+        key={idx}
+        className="bg-[#1e1e1e] rounded-lg flex flex-col justify-center items-center h-32 w-full sm:w-60 mx-auto transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-[0_0_20px_#00ff88]"
+      >
+        <div className="text-green-400 text-6xl">{skill.icon}</div>
+        <h3 className="text-xl font-semibold capitalize mt-2">{skill.name}</h3>
+      </div>
+    ))}
+  </div>
+</section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-4 bg-[#0a0a0a]">
+      <section id="projects" className="py-20 px-4 ">
         <h2 className="text-center text-3xl text-[#00ff88] font-bold mb-12">
           My Projects
         </h2>
@@ -224,7 +238,7 @@ function App() {
               <h3 className="text-xl font-bold mb-2">
                 To-Do-List (Full-stack)
               </h3>
-              <p className="mb-4">Description of project </p>
+              <p className="mb-4">A full-stack productivity app built using MongoDB, Express, React, and Node.js. Users can add, edit, and delete tasks with a responsive UI and real-time updates. </p>
               <div className="flex gap-4  mt-8">
                 <a
                   href="https://todolist-fullstack-1-i2zm.onrender.com"
@@ -247,7 +261,9 @@ function App() {
               <h3 className="text-xl font-bold mb-2">
                 Basic Details Form (Full-stack)
               </h3>
-              <p className="mb-4">Description of project </p>
+              <p className="mb-4">The Basic Detail Form is collect user details like name, email, phone number, and address. It showcases clean layout structure, form validation, and an intuitive UI.
+
+Features: </p>
               <div className="flex gap-4  mt-8">
                 <a
                   href="https://basic-detail-form.onrender.com"
@@ -265,12 +281,12 @@ function App() {
             </div>
           </div>
 
-          <div className="bg-[#1e1e1e] rounded-lg overflow-hidden transition-transform transform hover:-translate-y-1">
+          <div className="bg-[#1e1e1e] rounded-lg overflow-hidden transition-transform transform hover:-translate-y-1 ">
             <div className="p-6">
               <h3 className="text-xl font-bold mb-2">
                 Spot-The-Avengers(Full-stack)
               </h3>
-              <p className="mb-4">Description of project </p>
+              <p className="mb-4">Spot The Avengers" is a fun and interactive game where players test their observation skills by identifying hidden Avengers characters in an image.  </p>
               <div className="flex gap-4  mt-8">
                 <a
                   href="https://spot-the-avengers-ht6a.vercel.app"
@@ -288,51 +304,13 @@ function App() {
             </div>
           </div>
 
-          <div className="bg-[#1e1e1e] rounded-lg overflow-hidden transition-transform transform hover:-translate-y-1">
-            <div className="p-6">
-              <h3 className="text-xl font-bold mb-2">Ecommarce-React</h3>
-              <p className="mb-4">Description of project </p>
-              <div className="flex gap-4  mt-8">
-                <a
-                  href="https://ecommerce-with-react-alpha.vercel.app"
-                  className="btn small py-2 px-4 bg-[#00ff88] text-black rounded"
-                >
-                  View
-                </a>
-                <a
-                  href="https://github.com/Rishijangir566"
-                  className="btn small py-2 px-4 border border-[#00ff88] text-[#00ff88] rounded"
-                >
-                  GitHub
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="bg-[#1e1e1e] rounded-lg overflow-hidden transition-transform transform hover:-translate-y-1">
-            <div className="p-6">
-              <h3 className="text-xl font-bold mb-2">Expense-Traker</h3>
-              <p className="mb-4">Description of project </p>
-              <div className="flex gap-4  mt-8">
-                <a
-                  href="https://expense-react-murex.vercel.app"
-                  className="btn small py-2 px-4 bg-[#00ff88] text-black rounded"
-                >
-                  View
-                </a>
-                <a
-                  href="https://github.com/Rishijangir566"
-                  className="btn small py-2 px-4 border border-[#00ff88] text-[#00ff88] rounded"
-                >
-                  GitHub
-                </a>
-              </div>
-            </div>
-          </div>
+         
+         
 
           <div className="bg-[#1e1e1e] rounded-lg overflow-hidden transition-transform transform hover:-translate-y-1">
             <div className="p-6">
               <h3 className="text-xl font-bold mb-2">Memory-Game</h3>
-              <p className="mb-4">Description of project </p>
+              <p className="mb-4">A sleek and responsive memory card game designed to challenge your focus and sharpen your memory.</p>
               <div className="flex gap-4 mt-8">
                 <a
                   href="https://rishijangir566.github.io/flip-card/"
@@ -353,7 +331,7 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="pt-20 px-4">
+      <section id="contact"  className="pt-20 px-4 bg-[#0a0a0a]">
         <h2 className="text-center text-3xl text-[#00ff88] font-bold mb-12">
           Get in Touch
         </h2>
@@ -384,7 +362,15 @@ function App() {
             </button>
           </form>
         </div>
-        <div className="flex justify-end gap-6 my-4 mx-20 text-2xl">
+        <div className="flex justify-end gap-6 py-4 mx-20 text-2xl">
+          <div className="text-sm flex mt-2">
+          <FaEnvelope className="text-cyan-400  mt-1" />
+          <a href="mailto:rishijangirjr@gmail.com" className="hover:text-cyan-400 pl-2">rishijangirjr@gmail.com</a>
+          </div>
+          <div className="text-sm flex mt-2">
+          <FaPhoneAlt className="text-cyan-400 mt-1 " />
+          <a href="tel:+919772336350" className="hover:text-cyan-400  pl-2">+919772336350</a>
+          </div>
           <a
             href="https://github.com/Rishijangir566"
             className="hover:text-[#00ff88]"
@@ -404,7 +390,7 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="text-center py-6 bg-[#0a0a0a] text-[#b3b3b3]">
+      <footer className="text-center py-6 text-[#b3b3b3]">
         &copy; 2024 Risabh Jangir. All rights reserved.
       </footer>
     </div>
