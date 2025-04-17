@@ -183,7 +183,7 @@ function App() {
       {/* Hero Section */}
       <section
         id="home"
-        className="min-h-screen flex items-center justify-center text-center px-4 "
+        className="min-h-screen bg-[#1f2937] flex items-center justify-center text-center px-4 "
       >
         <div className="mt-16">
           <p className=" text-lg my-4 text-[#00ff88]  ">Hey, my name is</p>
