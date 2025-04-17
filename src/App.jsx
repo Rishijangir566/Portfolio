@@ -42,22 +42,26 @@ function App() {
     },
   ];
 
-  
-    const [formData, setFormData] = useState({
-      name: '',
-      email: '',
-      message: '',
-    });
-  
-    const handleChange = (e) => {
-      setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
-  
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      console.log('Form Submitted:', formData);
-      // You can integrate with EmailJS, Formspree, or your backend here
-    };
+  // const [formData, setFormData] = useState({
+  //   name: "",
+  //   email: "",
+  //   message: "",
+  // });
+
+  // const handleChange = (e) => {
+  //   // setFormData({ ...formData, [e.target.name]: e.target.value });
+  //   const { name, value } = e.target;
+  //   setFormData((prev) => ({
+  //     ...prev,
+  //     [name]: value,
+  //   }));
+  // };
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log("Form Submitted:", formData);
+  //   // You can integrate with EmailJS, Formspree, or your backend here
+  // };
 
   const fadeIn = {
     hidden: { opacity: 0, y: 30 },
@@ -182,8 +186,9 @@ function App() {
         className="min-h-screen flex items-center justify-center text-center px-4 "
       >
         <div className="mt-16">
-          <h1 className="text-5xl md:text-6xl text-[#00ff88] font-bold mb-4">
-            Rishabh Jangir
+          <p className=" text-lg my-4 text-[#00ff88]  ">Hey, my name is</p>
+          <h1 className="text-5xl md:text-6xl font-bold mb-4">
+            RISHABH JANGIR
           </h1>
           <img
             className="h-30 w-30 my-8 rounded-full mx-auto"
@@ -455,49 +460,45 @@ function App() {
         <h2 className="text-center text-3xl text-[#00ff88] font-bold mb-4">
           Get in Touch
         </h2>
-       
 
         <div className="max-w-lg mx-auto mt-10 p-6  shadow-lg rounded-2xl">
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <input
-          type="text"
-          name="name"
-          placeholder=" Enter Your Name"
-          value={formData.name}
-          onChange={handleChange}
-          className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-          required
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Enter Your Email"
-          value={formData.email}
-          onChange={handleChange}
-          className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-          required
-        />
-        <textarea
-          name="message"
-          placeholder="Enter Your Message"
-          value={formData.message}
-          onChange={handleChange}
-          className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-          rows="5"
-          required
-        ></textarea>
-        <button
-          type="submit"
-          className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition"
-        >
-          Send Message
-        </button>
-      </form>
-    </div>
+          <form
+             action="https://formspree.io/f/movezrop"
+             method="POST"
+            className="space-y-4"
+          >
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter Your Name"
+              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter Your Email"
+              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Enter Your Message"
+              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              rows="5"
+              required
+            ></textarea>
+            <button
+              type="submit"
+              className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
 
-
-        <div className=" gap-6 py-4  text-2xl ">
-          {/* <div className="text-lg flex justify-center my-8 ">
+        <div className=" gap-6 py-4  text-2xl flex justify-end ">
+          <div className="text-lg flex justify-center">
             <FaEnvelope className="text-[#00ff88]  mt-1" />
             <a
               href="mailto:rishijangirjr@gmail.com"
@@ -506,8 +507,8 @@ function App() {
             >
               rishijangirjr@gmail.com
             </a>
-          </div> */}
-          {/* <div className=" flex text-lg  justify-center my-8">
+          </div>
+          <div className=" flex text-lg  justify-center ">
             <FaPhoneAlt className="text-[#00ff88] mt-1 " />
             <a
               href="tel:+919772336350"
@@ -516,32 +517,31 @@ function App() {
             >
               +919772336350
             </a>
-          </div> */}
-          <div className="flex justify-end mr-12 gap-4 mb-8">
+          </div>
+          <div className="flex justify-end mr-12 gap-4 ">
             <a
               href="https://github.com/Rishijangir566"
               target="_blank"
               className="hover:text-[#00ff88]"
             >
-              <FaSquareGithub className="text-3xl" />
+              <FaSquareGithub className="text-3xl " />
             </a>
             <a
               href="https://www.linkedin.com/in/rishab-jangir-306a7926b/"
               target="_blank"
               className="hover:text-[#00ff88]"
             >
-              <FaLinkedin className="text-3xl" />
+              <FaLinkedin className="text-3xl text-blue-600" />
             </a>
             <a
               href="https://wa.me/919772336350"
               target="_blank"
               className="hover:text-[#00ff88]"
             >
-              <FaSquareWhatsapp className="text-3xl" />
+              <FaSquareWhatsapp className="text-3xl text-green-400" />
             </a>
           </div>
         </div>
-
       </section>
 
       {/* Footer */}
