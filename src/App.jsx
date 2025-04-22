@@ -204,8 +204,7 @@ function App() {
       {/* Hero Section */}
       <section
         id="home"
-        className="min-h-screen bg-gradient-to-r from-[#0f2027] via-[#203a43] to-[#2c5364]
- flex items-center justify-center text-center px-4 "
+        className="min-h-screen flex items-center justify-center text-center px-4 "
       >
         <div className="mt-16">
           <p className=" text-lg my-4 text-[#00ff88]  ">Hey, my name is</p>
@@ -230,10 +229,11 @@ function App() {
               Get in Touch
             </a>
             <a
-              href="#projects"
+              href="/Myresume.pdf"
+              target="_blank"
               className="border-2 border-[#00ff88] text-[#00ff88] py-2 px-4 rounded hover:-translate-y-1 transition-all"
             >
-              View My Work
+              View Resume
             </a>
           </div>
         </div>
@@ -298,13 +298,13 @@ function App() {
               <motion.div
                 key={index}
                 variants={fadeIn}
-                className="bg-[#1f2937] p-6 rounded-xl shadow-md hover:shadow-cyan-400/20 transition"
+                className="bg-[#323335] p-6 rounded-xl shadow-md hover:shadow-white transition"
               >
                 <h3 className="text-xl font-semibold text-cyan-400">
                   {exp.role} @ {exp.company}
                 </h3>
                 <p className="text-sm text-slate-400 mb-2">{exp.duration}</p>
-                <p className="text-slate-300 my-8">{exp.description}</p>
+                <p className=" my-8">{exp.description}</p>
                 <div className="flex justify-around mt-4">
                   {[cls1, cls2, cls3, cls4, cls5].map((src, index) => (
                     <div
