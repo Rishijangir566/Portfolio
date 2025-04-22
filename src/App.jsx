@@ -28,6 +28,13 @@ import { RiJavascriptFill, RiTailwindCssFill } from "react-icons/ri";
 import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { useState } from "react";
+import avenger from "./assets/avenger.gif";
+import avengerImg from "./assets/avenger2.jpg";
+import card from "./assets/Flipcard.gif";
+import cardImg from "./assets/card.jpg";
+import formImg from "./assets/formImg.jpg";
+import form from "./assets/form.gif";
+
 
 function App() {
   const Name = "RISHABH";
@@ -42,31 +49,45 @@ function App() {
     },
   ];
 
-  // const [formData, setFormData] = useState({
-  //   name: "",
-  //   email: "",
-  //   message: "",
-  // });
-
-  // const handleChange = (e) => {
-  //   // setFormData({ ...formData, [e.target.name]: e.target.value });
-  //   const { name, value } = e.target;
-  //   setFormData((prev) => ({
-  //     ...prev,
-  //     [name]: value,
-  //   }));
-  // };
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   console.log("Form Submitted:", formData);
-  //   // You can integrate with EmailJS, Formspree, or your backend here
-  // };
-
   const fadeIn = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   };
+
+
+  const projects = [
+    {
+      title: "Spot-the-avenger",
+      description:
+        "Spot the Avengers is an interactive web-based game where users are challenged to find hidden Avengers characters within an image.",
+      Tech: [
+       "HTML","CSS","JavaScript", "ReactJs", "Tailwind-CSS", 
+      ],
+      link: "https://spot-the-avengers-ht6a.vercel.app/",
+      image: avengerImg,
+      preview: avenger,
+    },
+    {
+      title: "Basic Detail Form",
+      description:
+        "Basic Detail Form is a full-stack app for collecting and storing user details securely in MongoDB via a structured form.",
+      Tech: ["ReactJs", "Tailwind-CSS" , "Mongo Db","Express","NodeJs"],
+      link: "https://basic-detail-form.onrender.com",
+      image: formImg,
+      preview: form,
+    },
+    {
+      title: "Memory Game",
+      description:
+        "A sleek and responsive memory card game designed to challenge your focus and sharpen your memory.",
+      Tech: ["HTML", "CSS", "JavaScript", "Tailwind-CSS"],
+      link: "https://rishijangir566.github.io/flip-card/",
+      image: cardImg,
+      preview: card,
+    },
+  ];
+
+
   return (
     <div className="font-sans text-white bg-[#121212]">
       {/* Navbar */}
@@ -183,7 +204,8 @@ function App() {
       {/* Hero Section */}
       <section
         id="home"
-        className="min-h-screen bg-[#1f2937] flex items-center justify-center text-center px-4 "
+        className="min-h-screen bg-gradient-to-r from-[#0f2027] via-[#203a43] to-[#2c5364]
+ flex items-center justify-center text-center px-4 "
       >
         <div className="mt-16">
           <p className=" text-lg my-4 text-[#00ff88]  ">Hey, my name is</p>
@@ -335,122 +357,63 @@ function App() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-4 ">
-        <h2 className="text-center text-3xl text-[#00ff88] font-bold mb-12">
-          My Projects
-        </h2>
-        <div className="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto">
-          <div className="bg-[#1e1e1e] rounded-lg overflow-hidden transition-transform transform hover:-translate-y-1">
-            <div className="p-6">
-              <h3 className="text-xl font-bold mb-2">
-                To-Do-List (Full-stack)
-              </h3>
-              <p className="mb-4">
-                A full-stack productivity app built using MongoDB, Express,
-                React, and Node.js. Users can add, edit, and delete tasks with a
-                responsive UI and real-time updates.{" "}
-              </p>
-              <div className="flex gap-4  mt-8">
-                <a
-                  href="https://todolist-fullstack-1-i2zm.onrender.com"
-                  target="_blank"
-                  className="btn small py-2 px-4 bg-[#00ff88] text-black rounded"
-                >
-                  View
-                </a>
-                <a
-                  href="https://github.com/Rishijangir566/TodoList_Fullstack"
-                  target="_blank"
-                  className="btn small py-2 px-4 border border-[#00ff88] text-[#00ff88] rounded"
-                >
-                  GitHub
-                </a>
-              </div>
-            </div>
+      <section
+        id="projects"
+        className="w-full  text-[#e0e0e0] py-20 px-6"
+      >
+        <div className="max-w-6xl mx-auto">
+          <div className="pb-8 text-center">
+            <p className="text-4xl font-bold inline text-[#00ff88]">Projects</p>
           </div>
 
-          <div className="bg-[#1e1e1e] rounded-lg overflow-hidden transition-transform transform hover:-translate-y-1">
-            <div className="p-6">
-              <h3 className="text-xl font-bold mb-2">
-                Basic Details Form (Full-stack)
-              </h3>
-              <p className="mb-4">
-                The Basic Detail Form is collect user details like name, email,
-                phone number, and address. It showcases clean layout structure,
-                form validation, and an intuitive UI. Features:{" "}
-              </p>
-              <div className="flex gap-4  mt-8">
-                <a
-                  href="https://basic-detail-form.onrender.com"
-                  target="_blank"
-                  className="btn small py-2 px-4 bg-[#00ff88] text-black rounded"
-                >
-                  View
-                </a>
-                <a
-                  href="https://github.com/Rishijangir566/basic_detail_form"
-                  target="_blank"
-                  className="btn small py-2 px-4 border border-[#00ff88] text-[#00ff88] rounded"
-                >
-                  GitHub
-                </a>
-              </div>
-            </div>
-          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((project, index) => (
+              <div
+                key={index}
+                className="relative group bg-[#1e1e1e] p-4 rounded-md shadow-md shadow-[#475261] overflow-hidden"
+              >
+                <div className="relative w-full h-48 overflow-hidden rounded-md mb-4">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover absolute inset-0 transition-opacity duration-300 group-hover:opacity-0"
+                  />
 
-          <div className="bg-[#1e1e1e] rounded-lg overflow-hidden transition-transform transform hover:-translate-y-1 ">
-            <div className="p-6">
-              <h3 className="text-xl font-bold mb-2">
-                Spot-The-Avengers(Full-stack)
-              </h3>
-              <p className="mb-4">
-                Spot The Avengers" is a fun and interactive game where players
-                test their observation skills by identifying hidden Avengers
-                characters in an image.{" "}
-              </p>
-              <div className="flex gap-4  mt-8">
-                <a
-                  href="https://spot-the-avengers-ht6a.vercel.app"
-                  target="_blank"
-                  className="btn small py-2 px-4 bg-[#00ff88] text-black rounded"
-                >
-                  View
-                </a>
-                <a
-                  href="https://github.com/Rishijangir566/Spot-The-Avengers"
-                  target="_blank"
-                  className="btn small py-2 px-4 border border-[#00ff88] text-[#00ff88] rounded"
-                >
-                  GitHub
-                </a>
-              </div>
-            </div>
-          </div>
+                  <img
+                    src={project.preview}
+                    alt={`${project.title} preview`}
+                    className="w-full h-full object-cover absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  />
+                </div>
 
-          <div className="bg-[#1e1e1e] rounded-lg overflow-hidden transition-transform transform hover:-translate-y-1">
-            <div className="p-6">
-              <h3 className="text-xl font-bold mb-2">Memory-Game</h3>
-              <p className="mb-4">
-                A sleek and responsive memory card game designed to challenge
-                your focus and sharpen your memory.
-              </p>
-              <div className="flex gap-4 mt-8">
+                <h3 className="text-xl font-semibold text-[#00ff88] mb-2">
+                  {project.title}
+                </h3>
+                <p className="text-sm text-[#d0d0d0] mb-3">
+                  {project.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2 mb-3">
+                  {project.Tech.map((tech, techIndex) => (
+                    <span
+                      key={techIndex}
+                      className="border border-[#00ff88] text-[#ffffff]  px-2 py-1 rounded-full text-xs"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
                 <a
-                  href="https://rishijangir566.github.io/flip-card/"
+                  href={project.link}
                   target="_blank"
-                  className="btn small py-2 px-4 bg-[#00ff88] text-black rounded"
+                  rel="noopener noreferrer"
+                  className="inline-block px-4 py-2 border border-[#00ff88] text-[#00ff88] rounded hover:bg-[#00ff88] hover:text-[#000000] transition text-sm"
                 >
-                  View
-                </a>
-                <a
-                  href="https://github.com/Rishijangir566/flip-card"
-                  target="_blank"
-                  className="btn small py-2 px-4 border border-[#00ff88] text-[#00ff88] rounded"
-                >
-                  GitHub
+                  View Project
                 </a>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -463,8 +426,8 @@ function App() {
 
         <div className="max-w-lg mx-auto mt-10 p-6  shadow-lg rounded-2xl">
           <form
-             action="https://formspree.io/f/movezrop"
-             method="POST"
+            action="https://formspree.io/f/movezrop"
+            method="POST"
             className="space-y-4"
           >
             <input
