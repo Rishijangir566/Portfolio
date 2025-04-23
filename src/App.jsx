@@ -34,6 +34,8 @@ import card from "./assets/Flipcard.gif";
 import cardImg from "./assets/card.jpg";
 import formImg from "./assets/formImg.jpg";
 import form from "./assets/form.gif";
+import note from "./assets/note.gif";
+import noteimg from "./assets/noteimg.jpg";
 
 
 function App() {
@@ -56,6 +58,15 @@ function App() {
 
 
   const projects = [
+    {
+      title: "Note-Making App",
+      description:
+        "A minimal and user-friendly note-making app that lets you quickly create, edit, and organize your notes.",
+      Tech: ["HTML", "CSS", "JavaScript", "ReactJs", "Tailwind-CSS"],
+      link: "https://add-note-sigma.vercel.app/",
+      image: noteimg,
+      preview: note,
+    },
     {
       title: "Spot-the-avenger",
       description:
