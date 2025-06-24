@@ -41,7 +41,7 @@ import arias from "./assets/aria.gif";
 import ecommarce from "./assets/ecommarce.png";
 import ecom from "./assets/ecom.gif";
 import gym from "./assets/gym.png";
-import gyms from "./assets/gyms.gif";
+import gyms from "./assets/Gyms.gif";
 
 function App() {
   const Name = "RISHABH";
