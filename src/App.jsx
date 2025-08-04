@@ -42,6 +42,8 @@ import ecommarce from "./assets/ecommarce.png";
 import ecom from "./assets/ecom.gif";
 import gym from "./assets/gym.png";
 import gyms from "./assets/Gyms.gif";
+import social from "./assets/social-image.jpg";
+import socialGif from "./assets/social-gif.gif";
 
 function App() {
   const Name = "RISHABH";
@@ -57,26 +59,34 @@ function App() {
   ];
 
   const projects = [
-    
     {
-  title: "Aria Website Beta",
-  description:
-    "A clean and modern personal portfolio built with pure HTML, CSS, and JavaScript. Features smooth scrolling, animated sections, and a responsive layout to showcase skills and projects.",
-  Tech: ["HTML", "CSS", "JavaScript"],
-  link: "https://aria-website-beta.vercel.app/",
-  image: aria, // Replace with your actual image import
-  preview: arias, // Replace with actual preview/image variable
-},
-{
-  title: "Gym Website",
-  description:
-    "A sleek and responsive fitness website designed using HTML, CSS, and JavaScript. Features animated hero sections, smooth navigation, membership plans, and a contact form — perfect for promoting a modern gym or fitness center.",
-  Tech: ["HTML", "CSS", "JavaScript"],
-  link: "https://gym-website-sooty-nine.vercel.app/",
-  image: gym, // replace with your actual import
-  preview: gyms, // optional preview image or gif
-}
-,
+      title: "Social Media App",
+      description:
+        "A full-stack social media platform where users can register, log in, post updates, like posts, and follow others. Built with a modern tech stack and responsive design.",
+      Tech: ["Node.js", "Express", "MongoDB", "EJS", "JavaScript", "CSS"],
+      link: "https://social-media-1-mfvc.onrender.com/",
+      image: social,
+      preview: socialGif,
+    },
+
+    {
+      title: "Aria Website Beta",
+      description:
+        "A clean and modern personal portfolio built with pure HTML, CSS, and JavaScript. Features smooth scrolling, animated sections, and a responsive layout to showcase skills and projects.",
+      Tech: ["HTML", "CSS", "JavaScript"],
+      link: "https://aria-website-beta.vercel.app/",
+      image: aria, // Replace with your actual image import
+      preview: arias, // Replace with actual preview/image variable
+    },
+    {
+      title: "Gym Website",
+      description:
+        "A sleek and responsive fitness website designed using HTML, CSS, and JavaScript. Features animated hero sections, smooth navigation, membership plans, and a contact form — perfect for promoting a modern gym or fitness center.",
+      Tech: ["HTML", "CSS", "JavaScript"],
+      link: "https://gym-website-sooty-nine.vercel.app/",
+      image: gym, // replace with your actual import
+      preview: gyms, // optional preview image or gif
+    },
     {
       title: "Note-Making App",
       description:
@@ -88,15 +98,22 @@ function App() {
     },
 
     {
-  title: "Full E-commerce Website",
-  description:
-    "A complete e-commerce web application featuring product listings, dynamic filtering, cart functionality, user authentication, and an admin dashboard. Built with a modern tech stack to deliver a seamless shopping experience and efficient backend management.",
-  Tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "JWT", "Redux"],
-  link: "https://ecommercefullstack-front.onrender.com/",
-  image: ecommarce, // replace with your actual import
-  preview: ecom // optional preview image or demo gif
-}
-,
+      title: "Full E-commerce Website",
+      description:
+        "A complete e-commerce web application featuring product listings, dynamic filtering, cart functionality, user authentication, and an admin dashboard. Built with a modern tech stack to deliver a seamless shopping experience and efficient backend management.",
+      Tech: [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Tailwind CSS",
+        "JWT",
+        "Redux",
+      ],
+      link: "https://ecommercefullstack-front.onrender.com/",
+      image: ecommarce, // replace with your actual import
+      preview: ecom, // optional preview image or demo gif
+    },
     {
       title: "Spot-the-avenger",
       description:
@@ -143,10 +160,10 @@ function App() {
       {/* Navbar */}
       <nav
         className={`fixed top-0 w-full z-50 px-6 md:px-12 border-b shadow-[0_0_25px_4px_rgba(29,78,216,0.4)] border-white/70 flex justify-between items-center py-4 transition-all duration-300 ${
-    scrolled
-      ? "bg-white/20 backdrop-blur-md shadow-xl "
-      : "bg-transparent"
-  }`}
+          scrolled
+            ? "bg-white/20 backdrop-blur-md shadow-xl "
+            : "bg-transparent"
+        }`}
       >
         {/* Logo + Brand */}
         <div className="flex items-center space-x-3 text-white font-bold text-2xl">
@@ -239,7 +256,7 @@ function App() {
             className="h-32 w-32 mx-auto rounded-full border-4 border-cyan-500 shadow-lg transition-transform hover:scale-105"
           />
           <h2 className="text-2xl md:text-3xl mt-6 font-semibold text-white/90">
-            I'm a <span className="text-cyan-400">Frontend Developer</span>
+            I'm a <span className="text-cyan-400">Full Stack Developer</span>
           </h2>
           <p className="text-white/70 mt-4 mb-8 leading-relaxed px-4">
             I focus on crafting responsive, performant web applications with
@@ -358,7 +375,6 @@ function App() {
           ))}
         </div>
       </section>
-
 
       {/* Projects Section */}
       <section
