@@ -69,6 +69,24 @@ function App() {
       preview: socialGif,
     },
 
+        {
+      title: "Full E-commerce Website",
+      description:
+        "A complete e-commerce web application featuring product listings, dynamic filtering, cart functionality, user authentication, and an admin dashboard. Built with a modern tech stack to deliver a seamless shopping experience and efficient backend management.",
+      Tech: [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Tailwind CSS",
+        "JWT",
+        "Redux",
+      ],
+      link: "https://ecommercefullstack-front.onrender.com/",
+      image: ecommarce, // replace with your actual import
+      preview: ecom, // optional preview image or demo gif
+    },
+
     {
       title: "Aria Website Beta",
       description:
@@ -97,23 +115,7 @@ function App() {
       preview: note,
     },
 
-    {
-      title: "Full E-commerce Website",
-      description:
-        "A complete e-commerce web application featuring product listings, dynamic filtering, cart functionality, user authentication, and an admin dashboard. Built with a modern tech stack to deliver a seamless shopping experience and efficient backend management.",
-      Tech: [
-        "React.js",
-        "Node.js",
-        "Express.js",
-        "MongoDB",
-        "Tailwind CSS",
-        "JWT",
-        "Redux",
-      ],
-      link: "https://ecommercefullstack-front.onrender.com/",
-      image: ecommarce, // replace with your actual import
-      preview: ecom, // optional preview image or demo gif
-    },
+
     {
       title: "Spot-the-avenger",
       description:
