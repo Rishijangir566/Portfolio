@@ -272,7 +272,7 @@ function App() {
               Get in Touch
             </a>
             <a
-              href="/Myresume.pdf"
+              href="/RishiResume.pdf"
               target="_blank"
               className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black py-2 px-6 rounded-lg transition-all duration-300"
             >
